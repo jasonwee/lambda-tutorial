@@ -32,7 +32,18 @@ import java.util.Collections;
 import java.util.Random;
 
 public class CloudScrobblingMusicLibrary implements MusicLibrary {
-    private final CloudScrobblingService cloudScrobblingService;
+	
+    @Override
+	public Rating ratingOf(Song song) {
+		// TODO Auto-generated method stub
+		//return MusicLibrary.super.ratingOf(song);
+		
+    	//int totalPlayCount = allSongs().stream().mapToInt(this::timesPlayed).sum();
+        //float score = (timesPlayed(song) / totalPlayCount) * 100.0f;
+        return new Rating(cloudScrobblingService.retrieveScrobbledRatingOf(song));
+	}
+
+	private final CloudScrobblingService cloudScrobblingService;
 
     public CloudScrobblingMusicLibrary() {
         this.cloudScrobblingService = new CloudScrobblingService();

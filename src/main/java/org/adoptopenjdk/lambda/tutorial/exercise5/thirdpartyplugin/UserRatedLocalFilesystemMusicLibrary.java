@@ -22,6 +22,8 @@ package org.adoptopenjdk.lambda.tutorial.exercise5.thirdpartyplugin;
  * #L%
  */
 
+import org.adoptopenjdk.lambda.tutorial.exercise5.musicplayer.MusicLibrary;
+import org.adoptopenjdk.lambda.tutorial.exercise5.musicplayer.Rating;
 import org.adoptopenjdk.lambda.tutorial.exercise5.musicplayer.Song;
 import org.adoptopenjdk.lambda.tutorial.exercise5.musicplayer.StarRating;
 import org.adoptopenjdk.lambda.tutorial.exercise5.musicplayer.UserRatedMusicLibrary;
@@ -34,7 +36,7 @@ import java.util.Set;
 
 public class UserRatedLocalFilesystemMusicLibrary implements UserRatedMusicLibrary {
 
-    private final Set<Song> allSongs = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
+	private final Set<Song> allSongs = Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
             new Song("A Change Is Gonna Come", "Sam Cooke"),
             new Song("Bad Moon Rising", "Creedence Clearwater Revival"),
             new Song("Candy", "Paulo Nutini"),

@@ -1,5 +1,7 @@
 ## Lambda Tutorial [![Build Status](https://travis-ci.org/AdoptOpenJDK/lambda-tutorial.png?branch=master)](https://travis-ci.org/AdoptOpenJDK/lambda-tutorial)
 
+jason wee: i finish the tutorial!!! xD
+
 A set of exercises to teach use of Java 8 lambda syntax, and the new Streams API.
 
 To follow the exercises:

@@ -42,7 +42,10 @@ public class VotingRules {
      */
     public static List<Person> eligibleVoters(List<Person> potentialVoters, int legalAgeOfVoting) {
         // [your code here]
+    	
+    	List<Person> persons = potentialVoters.stream().filter(s -> s.getAge() >= legalAgeOfVoting).collect(Collectors.toList());
 
-        return Collections.emptyList();
+        //return Collections.emptyList();
+    	return persons;
     }
 }
